@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Login Page</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <main class="login-shell">
+      <form class="login-form" id="loginForm" novalidate>
+        <h1>Welcome Back</h1>
+        <p class="form-subtitle">Log in to continue to your dashboard.</p>
+        <div class="form-group">
+          <label for="emailInput">Email address</label>
+          <input
+            type="email"
+            id="emailInput"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+          <span class="error-text" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="passwordInput">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="passwordInput"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+            <button type="button" id="togglePassword" aria-label="Toggle password visibility">
+              Show
+            </button>
+          </div>
+          <span class="error-text" id="passwordError"></span>
+        </div>
+        <button type="submit" class="submit-button">Sign in</button>
+        <p class="form-link">
+          <a href="#">Forgot password?</a>
+        </p>
+        <p class="status-message" id="statusMessage"></p>
+      </form>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
