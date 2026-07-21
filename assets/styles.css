@@ -1,0 +1,154 @@
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(circle at top, #4b6cb7, #182848 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-shell {
+  width: min(420px, 100%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.25rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+}
+
+.login-form h1 {
+  margin: 0;
+  font-size: 1.875rem;
+  color: #0f172a;
+}
+
+.form-subtitle {
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+  color: #475569;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #1e293b;
+}
+
+input {
+  width: 100%;
+  border-radius: 0.65rem;
+  border: 1px solid #cbd5f5;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.password-wrapper input {
+  flex: 1;
+}
+
+.password-wrapper button {
+  border: none;
+  background: rgba(37, 99, 235, 0.12);
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.9rem;
+  color: #1d4ed8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.password-wrapper button:hover {
+  background: rgba(37, 99, 235, 0.25);
+}
+
+.submit-button {
+  width: 100%;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-link a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.error-text {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #dc2626;
+  min-height: 1.1rem;
+}
+
+.status-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  min-height: 1.25rem;
+}
+
+.status-message.success {
+  color: #15803d;
+}
+
+.status-message.error {
+  color: #991b1b;
+}
+
+@media (max-width: 480px) {
+  .login-shell {
+    padding: 1.75rem;
+    border-radius: 1rem;
+  }
+
+  .password-wrapper button,
+  .submit-button {
+    font-size: 0.9rem;
+  }
+}
